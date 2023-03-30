@@ -1,0 +1,1 @@
+web: gunicorn learning_log.wsgi --log-file=- --access-logfile=- --error-logfile=- --log-level=debug --timeout=600 --workers=2
