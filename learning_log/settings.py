@@ -25,13 +25,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-s2e&@i+^l71(q333kfya@_$h1sl-7l&e76o%rsfd_tf27z5&7u"
 
-# SECURITY WARNING: don't run with debug turned on in production!
-import django_heroku
-django_heroku.settings(locals())
-if os.environ.get("DEBUG") == "TRUE":
-    DEBUG = True
-elif os.environ.get("DEBUG") == "FALSE":
-    DEBUG = False
+# # SECURITY WARNING: don't run with debug turned on in production!
+# import django_heroku
+# django_heroku.settings(locals())
+# if os.environ.get("DEBUG") == "TRUE":
+#     DEBUG = True
+# elif os.environ.get("DEBUG") == "FALSE":
+#     DEBUG = False
+
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
