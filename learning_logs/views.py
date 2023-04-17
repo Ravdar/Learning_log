@@ -36,8 +36,8 @@ def new_topic(request):
         form = TopicForm(data=request.POST)
         if form.is_valid():
             new_topic = form.save(commit=False)
-            new_topic.onwer = request.user
-            new_topic = form.save()
+            new_topic.owner = request.user
+            new_topic.save()
             return redirect("learning_logs:topics")
     context = {"form": form}
     return render(request, "learning_logs/new_topic.html", context)
@@ -91,3 +91,5 @@ def register(request):
 
     context = {"form": form}
     return render(request, "registration/register.html", context)
+
+
